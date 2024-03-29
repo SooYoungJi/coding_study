@@ -38,13 +38,14 @@ public class Solution {
 					if(i == k) 
 						continue;
 					for (int j = 1; j <= N; j++) {
-						if(i==j) {
-							board[i][j] = 0;
-						}else if(j == k) {
-							continue;
-						}else {
-							board[i][j] = Math.min(board[i][k]+board[k][j], board[i][j]);
-						}
+//						if(i==j) {
+//							board[i][j] = 0;
+//						}else if(j == k) {
+//							continue;
+//						}else {
+//							board[i][j] = Math.min(board[i][k]+board[k][j], board[i][j]);
+//						}
+						board[i][j] = Math.min(board[i][k]+board[k][j], board[i][j]);
 					}
 				}
 				
