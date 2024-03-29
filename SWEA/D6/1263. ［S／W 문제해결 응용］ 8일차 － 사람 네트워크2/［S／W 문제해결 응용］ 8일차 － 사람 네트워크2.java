@@ -27,7 +27,8 @@ public class Solution {
 			for (int i = 1; i <= N; i++) {
 				for (int j = 1; j <= N; j++) {
 					int v = Integer.parseInt(st.nextToken());
-					if(v == 0) board[i][j] = 100;
+					if(i==j)continue;
+					else if(v == 0) board[i][j] = 100;
 					else board[i][j] = v;
 				}
 			}
