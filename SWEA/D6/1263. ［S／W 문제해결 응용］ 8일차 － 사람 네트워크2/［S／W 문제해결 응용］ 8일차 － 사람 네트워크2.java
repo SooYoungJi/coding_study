@@ -19,21 +19,18 @@ public class Solution {
 		
 		int T = Integer.parseInt(br.readLine());
 		for (int tc = 1; tc <= T; tc++) {
-			sb.append("#"+tc+" ");
+			sb.append("#").append(tc).append(" ");
 			st = new StringTokenizer(br.readLine());
 			
 			N = Integer.parseInt(st.nextToken());
-//			System.out.println(N);
 			board = new int[N+1][N+1];
 			for (int i = 1; i <= N; i++) {
 				for (int j = 1; j <= N; j++) {
 					int v = Integer.parseInt(st.nextToken());
 					if(v == 0) board[i][j] = 100;
 					else board[i][j] = v;
-//					board[i][j] = v;
 				}
 			}
-//			printBoard();
 			
 			for (int k = 1; k <= N; k++) {
 				for (int i = 1; i <= N; i++) {
@@ -51,7 +48,6 @@ public class Solution {
 				}
 				
 			}
-//			printBoard();
 			int min = Integer.MAX_VALUE;
 			for (int i = 1; i <= N; i++) {
 				int sum = 0;
@@ -60,7 +56,7 @@ public class Solution {
 				}
 				min = Math.min(min, sum);
 			}
-			sb.append(min+"\n");
+			sb.append(min).append("\n");
 		}
 		System.out.println(sb);
 	}
